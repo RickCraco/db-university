@@ -23,3 +23,12 @@ ON course_teacher.course_id = courses.id
 JOIN teachers
 ON course_teacher.teacher_id = teachers.id
 WHERE teachers.id = 44
+
+4:
+SELECT students.name,students.surname, degrees.name as 'corso di laurea', departments.name as 'dipartimento'
+FROM students 
+JOIN degrees
+ON degrees.id = students.degree_id
+JOIN departments
+ON departments.id= degrees.department_id
+ORDER BY students.name ASC, students.surname ASC;
