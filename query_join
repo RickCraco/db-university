@@ -13,3 +13,13 @@ FROM departments
 JOIN degrees
 ON degrees.department_id = departments.id
 WHERE departments.name= 'Dipartimento di Neuroscienze' AND degrees.nameLIKE 'Corso di Laurea Magistrale%';
+
+3:
+
+SELECT * 
+FROM courses
+JOIN course_teacher
+ON course_teacher.course_id = courses.id
+JOIN teachers
+ON course_teacher.teacher_id = teachers.id
+WHERE teachers.id = 44
