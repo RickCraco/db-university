@@ -8,3 +8,8 @@ WHERE degrees.name = 'Corso di Laurea in Economia' ;
 
 2:
 
+SELECT *
+FROM departments
+JOIN degrees
+ON degrees.department_id = departments.id
+WHERE departments.name= 'Dipartimento di Neuroscienze' AND degrees.nameLIKE 'Corso di Laurea Magistrale%';
